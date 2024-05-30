@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoSports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">InfoSports</div>
+        <nav>
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='registro.html'">Registro</button>
+            <button onclick="location.href='contato.html'">Contato</button>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>BEM VINDO À INFOSPORTS!</h1>
+            <p>Aqui é onde você encontra todos os itens mais novos e modernos do seu esporte preferido.</p>
+        </section>
+        <section class="esportes">
+            <div class="esporte">
+                <a href="boxe.html">
+                    <img src="img/box.jpg" alt="Boxe">
+                </a>
+                <h2>Boxe</h2>
+                <p>Descubra a força interior e a técnica impecável necessárias para se destacar no ringue.</p>
+            </div>
+            <div class="esporte">
+                <a href="crossfit.html">
+                    <img src="img/post-crossfit.webp" alt="Crossfit">
+                </a>
+                <h2>Crossfit</h2>
+                <p>Entre na arena do crossfit e desafie seu corpo em um treinamento intenso e variado.</p>
+            </div>
+            <div class="esporte">
+                <a href="neve.html">
+                    <img src="img/Esporte_na_neve_Hoquei_no_gelo-1024x701.jpg" alt="Esportes na Neve">
+                </a>
+                <h2>Esportes na Neve</h2>
+                <p>Sinta a adrenalina das montanhas cobertas de neve enquanto desliza pelas encostas.</p>
+            </div>
+            <div class="esporte">
+                <a href="basquete.html">
+                    <img src="img/i.jpg" alt="Basquete">
+                </a>
+                <h2>Basquete</h2>
+                <p>Drible, passe, arremesse! Junte-se ao emocionante mundo do basquete.</p>
+            </div>
+            <div class="esporte">
+                <a href="corrida.html">
+                    <img src="img/corrida.jpg" alt="Corrida">
+                </a>
+                <h2>Corrida</h2>
+                <p>Calce seus tênis e sinta a energia pulsante das corridas.</p>
+            </div>
+            <div class="esporte">
+                <a href="surf.html">
+                    <img src="img/medina-dunbar-696x392.jpeg" alt="Surf">
+                </a>
+                <h2>Surf</h2>
+                <p>Sinta a liberdade e a conexão com o mar enquanto desliza pelas ondas no surf.</p>
+            </div>
+            <div class="esporte">
+                <a href="trilha.html">
+                    <img src="img/como-comecar-a-fazer-trilha-e-as-regras-de-minimo-impacto.jpg" alt="Trilha">
+                </a>
+                <h2>Trilha</h2>
+                <p>Aventure-se pelos caminhos menos percorridos e descubra a beleza da natureza.</p>
+            </div>
+            <div class="esporte">
+                <a href="tenis.html">
+                    <img src="img/novak_djokovic_melhores_momentos_x_struff.jpg" alt="Tênis">
+                </a>
+                <h2>Tênis</h2>
+                <p>Experimente a elegância e a velocidade do tênis em quadra.</p>
+            </div>
+        </section>
+        <section class="imc">
+            <h2>Índice de Massa Corporal (IMC)</h2>
+            <form>
+                <label for="peso">Peso (KG):</label>
+                <input type="number" id="peso" name="peso" required>
+                <label for="altura">Altura (M):</label>
+                <input type="number" id="altura" name="altura" required>
+                <button type="button" onclick="calcularIMC()">Calcular</button>
+            </form>
+        </section>
+    </main>
+</body>
+<script>
+    function calcularIMC() {
+        const peso = document.getElementById('peso').value;
+        const altura = document.getElementById('altura').value;
+        if (peso && altura) {
+            const imc = peso / (altura * altura);
+            alert('Seu IMC é: ' + imc.toFixed(2));
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    }
+</script>
+</html>
+ 
